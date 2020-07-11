@@ -8,11 +8,12 @@ headers = {
               'Connection': 'keep-alive',
               "Referer": "https://news.qq.com"
 }
-response = requests.get(url,headers=headers).json()
+response = requests.get(url, headers=headers).json()
 
-# To write the json for China.json, because using Chinese so ensure_ascii=False
-json = json.loads(response['data'])
+# To write the json for China.json
+data = json.loads(response['data'])
 with open('./China.json', 'w', encoding="utf-8") as f:
-    f.write(json.dumps(json, ensure_ascii=False, indent=2))
+    f.write(json.dumps(data, ensure_ascii=False, indent=2))
+    print("China.json create successfully")
 
-    
+
