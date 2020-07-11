@@ -14,3 +14,5 @@ response = requests.get(url,headers=headers).json()
 json = json.loads(response['data'])
 with open('./China.json', 'w', encoding="utf-8") as f:
     f.write(json.dumps(json, ensure_ascii=False, indent=2))
+
+    
