@@ -51,6 +51,4 @@ class Map_CO:
         d_map = map_china()
         d_map.render()
 
-if __name__ == '__main__':
-    Map_CO = Map_CO()
-    Map_CO.Read_Excel()
+
