@@ -2,7 +2,7 @@ import webbrowser
 from Function.Crawler import Crawler
 from Function.Map_CO import Map_CO
 from Function.SaveExcel import SaveExcel
-from selenium import webdriver
+
 
 class Main:
 
