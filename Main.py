@@ -1,3 +1,4 @@
+import webbrowser
 from Function.Crawler import Crawler
 from Function.Map_CO import Map_CO
 from Function.SaveExcel import SaveExcel
@@ -14,8 +15,7 @@ class Main:
         self._Crawler.crawler()
         self._SaveExcel.Get_Json()
         self._Map_CO.Read_Excel()
-        driver = webdriver.Chrome()
-        driver.get("render.html")
+        webbrowser.open_new_tab('render.html')
 
 
 if __name__ == '__main__':
