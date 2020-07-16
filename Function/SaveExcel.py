@@ -83,9 +83,6 @@ class SaveExcel:
         self.save_excel(CO_In_Chi, ReportTimer)
 
     def save_excel(self, CO_In_Chi, ReportTimer):
-        # Create excel
-        workbook = ox.Workbook()
-        workbook.save('China.xlsx')
 
         # loading the China.xlsx
         writer = pd.ExcelWriter('China.xlsx', engine='openpyxl')

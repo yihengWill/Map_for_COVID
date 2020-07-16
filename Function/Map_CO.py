@@ -7,7 +7,7 @@ class Map_CO:
 
     def Read_Excel(self):
         # read the excel
-        excel = pd.read_excel('China.xlsx', sheet_name='2020-07-12')
+        excel = pd.read_excel('China.xlsx', sheet_name='2020-07-13')
         # show the sum of province data
         data = excel.groupby(by='province', as_index=False).sum()
         self.Show_Map(data)
