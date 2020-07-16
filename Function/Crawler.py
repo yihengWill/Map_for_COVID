@@ -1,5 +1,6 @@
 import requests
 import json
+import demjson
 
 class Crawler:
 
@@ -40,9 +41,12 @@ class Crawler:
         # To write the json for Au.json
         info = json.dumps(response)
         data = json.loads(info)
+
         with open('Au.json', 'w', encoding="utf-8") as f:
             f.write(json.dumps(data, ensure_ascii=False, indent=2))
             print("AU.json create successfully")
+
+
 
 if __name__ == '__main__':
     Crawler =Crawler()

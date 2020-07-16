@@ -76,6 +76,7 @@ class SaveExcel:
         CO_In_Chi['today_confirm'] = today_confirmlist
         CO_In_Chi['today_confirmCuts'] = today_confirmCutslist
 
+
         # delete total and today list
         CO_In_Chi.drop(['total', 'today'], axis=1, inplace=True)
 
@@ -100,3 +101,6 @@ class SaveExcel:
         except FileNotFoundError:
             pass
 
+if __name__ == '__main__':
+    SaveExcel = SaveExcel()
+    SaveExcel.Get_Json()
